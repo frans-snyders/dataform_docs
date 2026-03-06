@@ -49,7 +49,7 @@ export class DataformCompiler {
     try {
       console.log('Using Dataform CLI to compile project...');
       
-      const { stdout } = await execAsync('dataform compile --timeout 10m --json', {
+      const { stdout } = await execAsync('dataform compile --timeout=10m --json', {
         cwd: projectPath,
         maxBuffer: 50 * 1024 * 1024, // 50MB buffer for large projects
       });
